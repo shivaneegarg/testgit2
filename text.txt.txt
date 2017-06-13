@@ -1,0 +1,61 @@
+/*Write a program to search for the "saddle points" in a 5 by 5 array of integers.
+ A saddle point is a cell whose value is greater than or equal to any in its row, and less than or equal to any in its column.
+  There may be more than one saddle point in the array. Print out the coordinates of any saddle points your program finds
+  . Print out "No saddle points" if there are none.*/
+  #include<stdio.h>
+  int main()
+  {
+  	int a[3][3],i,j,k,l=0,m=0,n;
+  	printf("take input for array");
+  	for(i=0;i<3;i++)
+  	for(j=0;j<3;j++)
+  	scanf("%d",&a[i][j]);
+  	printf("take input for searching element for saddle point");
+  	scanf("%d",&n);
+  		for(j=0;j<3;j++)
+  		{
+  			for(k=0;k<3;k++)
+  			{
+			 	if(a[k][j]>n)
+  			
+  			{
+  				l++;
+			  }
+			  else if(a[k][j]==n)
+			  m++;
+		  }
+	  }
+	  if(l==0)
+	  {
+	  	printf("no any lower then this means equal");
+	  }
+	 else  if(m==0)
+	  {
+	  	printf("no any equal then thismeans low in this ");
+	  }
+	  else if(m==0&&l==0)
+	  printf("any nuber eual and  nt lolower");
+	  for(j=0;j<3;j++)
+  		{
+  			for(k=0;k<3;k++)
+  			{
+			 	if(a[j][k]<n)
+  			
+  			{
+  				l++;
+			  }
+			  else if(a[j][k]==n)
+			  m++;
+		  }
+	  }
+	  if(l==0)
+	  {
+	  	printf("no any greater  then this means equal");
+	  }
+	 else if(m==0)
+	  {
+	  	printf("no any equal then thismeans greater in this ");
+	  }
+	   else if(m==0&&l==0)
+	  printf("any nuber nt eual and higher");
+}
